@@ -1,0 +1,25 @@
+https://services.odata.org/TripPinRESTierService/(S(kgoeuh1x0jveff0efe4lodbl))/People?$select=FirstName, LastName&$filter=contains(UserName, 'Henry')
+
+Post https://services.odata.org/TripPinRESTierService/(S(kgoeuh1x0jveff0efe4lodbl))/People
+{
+    "UserName":"MarcioAmandy",
+    "FirstName":"Marcio",
+    "LastName":"Amandy",
+    "Emails":[
+        "marcioamandy@example.com"
+    ],
+    "AddressInfo": [
+    {
+      "Address": "187 Suffolk Ln.",
+      "City": {
+        "Name": "Boise",
+        "CountryRegion": "United States",
+        "Region": "ID"
+      }
+    }
+    ]
+}
+
+DELETE https://services.odata.org/TripPinRESTierService/(S(kgoeuh1x0jveff0efe4lodbl))/People('MarcioAmandy')
+
+https://services.odata.org/TripPinRESTierService/(S(kgoeuh1x0jveff0efe4lodbl))/Airports?$filter=contains(Location/Address, 'District')
